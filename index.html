@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Fruits — Blox Fruits trading crew</title>
+  <meta name="description" content="Premium Blox Fruits Discord crew: trading, live values, clans, tournaments, giveaways and a DC economy.">
+  <meta name="theme-color" content="#050309">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://dark-fruits.official10.workers.dev/index.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dark Fruits">
+  <meta property="og:title" content="Dark Fruits — Blox Fruits trading crew">
+  <meta property="og:description" content="Premium Blox Fruits Discord crew: trading, live values, clans, tournaments, giveaways and a DC economy.">
+  <meta property="og:image" content="og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dark Fruits — Blox Fruits trading crew">
+  <meta name="twitter:description" content="Premium Blox Fruits Discord crew: trading, live values, clans, tournaments, giveaways and a DC economy.">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="logo-mark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800;900&family=Sora:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=6">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="aura" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+<header class="top" id="top">
+  <div class="top-inner">
+    <a href="index.html" class="brand" aria-label="Dark Fruits — home"><span class="mark"><img src="dark-fruits-logo.gif" width="28" height="25" alt=""></span><span class="word">DARK <span>FRUITS</span></span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html">Home</a><a href="trading.html">Trading</a><a href="values.html">Values</a><a href="events.html">Events</a><a href="giveaways.html">Giveaways</a><a href="clans.html">Clans</a><a href="shop.html">Shop</a>
+      <div class="nav-more" id="nav-more">
+        <button type="button" aria-expanded="false" aria-haspopup="true">More <span class="caret"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9.5 12 15.5 18 9.5"/></svg></span></button>
+        <div class="over-panel"><a href="staff.html">Staff</a><a href="rules.html">Rules</a><a href="https://discadia.com/server/blox-fruits-trading-and-chat-h/" target="_blank" rel="noopener"><span class="emoji " aria-hidden="true" style="animation-delay:-0.00s">💜</span> Discadia</a></div>
+      </div>
+      <a class="btn btn-main btn-join" href="https://discord.gg/jNrBh8EbQ" target="_blank" rel="noopener">Join</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span class="b-icon b-icon--menu"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span><span class="b-icon b-icon--close"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg></span></button>
+  </div>
+  <div class="nav-progress" aria-hidden="true"><i id="nprog"></i></div>
+</header>
+<nav class="drawer" id="drawer" aria-label="Mobile">
+  <span class="d-label">Sections</span>
+  <a href="index.html">Home<span>Start here</span></a><a href="trading.html">Trading<span>Partners & safety</span></a><a href="values.html">Values<span>Live values & stock</span></a><a href="events.html">Events<span>Tournaments & races</span></a><a href="giveaways.html">Giveaways<span>Entries & perks</span></a><a href="clans.html">Clans<span>5 divisions</span></a><a href="shop.html">Shop & DC<span>The economy</span></a><a href="staff.html">Staff<span>Leadership</span></a><a href="rules.html">Rules<span>Standards</span></a><a href="https://discadia.com/server/blox-fruits-trading-and-chat-h/" target="_blank" rel="noopener">Like us on Discadia<span>Support the crew</span></a>
+  <a class="btn btn-main d-join" href="https://discord.gg/jNrBh8EbQ" target="_blank" rel="noopener"><svg class="icon icon--brand icon--sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.3 4.4A16.5 16.5 0 0 0 16.1 3l-.3.6a12.4 12.4 0 0 0-3.6 0L11.9 3a16.5 16.5 0 0 0-4.2 1.4C4.9 8.6 4.2 12.7 4.4 16.7a16.7 16.7 0 0 0 5 2.5l.7-1.1a10.7 10.7 0 0 1-1.7-.8l.4-.3a11.9 11.9 0 0 0 10.4 0l.4.3-1.7.8.7 1.1a16.7 16.7 0 0 0 5-2.5c.3-4.6-.6-8.6-2.3-12.3ZM9.7 14.4c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Zm4.6 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Z"/></svg> Join Discord</a>
+</nav><main id="main">
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy reveal">
+        <span class="status-pill"><span class="dot"></span> Live on Discord — trading open 24/7</span>
+        <h1><span class="l1">DARK</span><span class="l2">FRUITS</span></h1>
+        <p class="hero-tag">Rule the fruits</p>
+        <p class="hero-lede">A premium Blox Fruits crew for traders, clans, tournaments and giveaways — built for players who <b>actually grind</b>.</p>
+        <div class="cta-row">
+          <a href="https://discord.gg/jNrBh8EbQ" class="btn btn-main" target="_blank" rel="noopener"><svg class="icon icon--brand icon--sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.3 4.4A16.5 16.5 0 0 0 16.1 3l-.3.6a12.4 12.4 0 0 0-3.6 0L11.9 3a16.5 16.5 0 0 0-4.2 1.4C4.9 8.6 4.2 12.7 4.4 16.7a16.7 16.7 0 0 0 5 2.5l.7-1.1a10.7 10.7 0 0 1-1.7-.8l.4-.3a11.9 11.9 0 0 0 10.4 0l.4.3-1.7.8.7 1.1a16.7 16.7 0 0 0 5-2.5c.3-4.6-.6-8.6-2.3-12.3ZM9.7 14.4c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Zm4.6 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Z"/></svg> Join Discord</a>
+          <a href="clans.html" class="btn btn-ghost">Explore clans <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+        </div>
+        
+  <div class="stats">
+    <div class="stat"><strong id="member-count">261</strong><span>Members</span></div>
+    <div class="stat"><strong id="online-count">68</strong><span>Online now</span></div>
+    <div class="stat"><strong>24/7</strong><span>Trading</span></div>
+  </div>
+      </div>
+      
+<div class="hero-art reveal" data-delay="150" aria-hidden="true">
+  <div class="rings"></div>
+  <div class="mark-tile">
+    <img src="dark-fruits-logo.gif" alt="" width="280" height="255" fetchpriority="high" decoding="async">
+  </div>
+  <div class="orbit orbit--1"><img src="f05.png" alt="" loading="lazy" decoding="async"></div><div class="orbit orbit--2"><img src="f12.png" alt="" loading="lazy" decoding="async"></div><div class="orbit orbit--3"><img src="f18.png" alt="" loading="lazy" decoding="async"></div><div class="orbit orbit--4"><img src="f24.png" alt="" loading="lazy" decoding="async"></div><div class="orbit orbit--5"><img src="f31.png" alt="" loading="lazy" decoding="async"></div><div class="orbit orbit--6"><img src="f38.png" alt="" loading="lazy" decoding="async"></div>
+</div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span class="ticker-item"><span class="emoji " aria-hidden="true" style="animation-delay:-0.00s">⚔️</span>Trading hub</span><span class="ticker-item"><span class="emoji " aria-hidden="true" style="animation-delay:-0.55s">📊</span>Live values</span><span class="ticker-item"><span class="emoji " aria-hidden="true" style="animation-delay:-1.10s">🏴</span>5 clan divisions</span><span class="ticker-item"><span class="emoji " aria-hidden="true" style="animation-delay:-1.65s">🏆</span>Tournaments</span><span class="ticker-item"><span class="emoji " aria-hidden="true" style="animation-delay:-2.20s">📜</span>Daily quests</span><span class="ticker-item"><span class="emoji " aria-hidden="true" style="animation-delay:-2.75s">🎁</span>Giveaways</span><span class="ticker-item"><span class="emoji " aria-hidden="true" style="animation-delay:-3.30s">🪙</span>DC economy</span><span class="ticker-item"><span class="emoji " aria-hidden="true" style="animation-delay:-0.00s">📈</span>Ranked chat</span><span class="ticker-item"><span class="emoji " aria-hidden="true" style="animation-delay:-0.55s">💜</span>Like us on Discadia</span><span class="ticker-item"><span class="emoji " aria-hidden="true" style="animation-delay:-1.10s">⚔️</span>Trading hub</span><span class="ticker-item"><span class="emoji " aria-hidden="true" style="animation-delay:-1.65s">📊</span>Live values</span><span class="ticker-item"><span class="emoji " aria-hidden="true" style="animation-delay:-2.20s">🏴</span>5 clan divisions</span><span class="ticker-item"><span class="emoji " aria-hidden="true" style="animation-delay:-2.75s">🏆</span>Tournaments</span><span class="ticker-item"><span class="emoji " aria-hidden="true" style="animation-delay:-3.30s">📜</span>Daily quests</span><span class="ticker-item"><span class="emoji " aria-hidden="true" style="animation-delay:-0.00s">🎁</span>Giveaways</span><span class="ticker-item"><span class="emoji " aria-hidden="true" style="animation-delay:-0.55s">🪙</span>DC economy</span><span class="ticker-item"><span class="emoji " aria-hidden="true" style="animation-delay:-1.10s">📈</span>Ranked chat</span><span class="ticker-item"><span class="emoji " aria-hidden="true" style="animation-delay:-1.65s">💜</span>Like us on Discadia</span>
+  </div>
+</div>
+
+<div class="wrap">
+  <section class="section">
+    <div class="sec-head reveal">
+      <div class="eyebrow"><span class="emoji " aria-hidden="true" style="animation-delay:-2.20s">🔥</span> <b>01</b> Why join</div>
+      <div>
+        <h2>Everything in one crew</h2>
+        <p>Trading, voice, shop economy, daily quests, clans, tournaments and ranked chat — all built around Blox Fruits.</p>
+      </div>
+    </div>
+    <div class="hub">
+      <a href="trading.html"><span class="ico"><span class="emoji " aria-hidden="true" style="animation-delay:-2.75s">⚔️</span></span><span class="txt"><strong>Trading</strong><small>Partners &amp; safety</small></span><span class="go"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8"/></svg></span></a>
+      <a href="values.html"><span class="ico"><span class="emoji " aria-hidden="true" style="animation-delay:-3.30s">📊</span></span><span class="txt"><strong>Values</strong><small>Live values &amp; stock</small></span><span class="go"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8"/></svg></span></a>
+      <a href="events.html"><span class="ico"><span class="emoji " aria-hidden="true" style="animation-delay:-0.00s">🏆</span></span><span class="txt"><strong>Events</strong><small>Tournaments &amp; races</small></span><span class="go"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8"/></svg></span></a>
+      <a href="giveaways.html"><span class="ico"><span class="emoji " aria-hidden="true" style="animation-delay:-0.55s">🎁</span></span><span class="txt"><strong>Giveaways</strong><small>Entries &amp; perks</small></span><span class="go"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8"/></svg></span></a>
+      <a href="clans.html"><span class="ico"><span class="emoji " aria-hidden="true" style="animation-delay:-1.10s">🏴</span></span><span class="txt"><strong>Clans</strong><small>Five divisions</small></span><span class="go"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8"/></svg></span></a>
+      <a href="shop.html"><span class="ico"><span class="emoji " aria-hidden="true" style="animation-delay:-1.65s">🛒</span></span><span class="txt"><strong>Shop &amp; DC</strong><small>Tickets &amp; roles</small></span><span class="go"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8"/></svg></span></a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="sec-head reveal">
+      <div class="eyebrow"><span class="emoji " aria-hidden="true" style="animation-delay:-2.20s">🧺</span> <b>02</b> The vault</div>
+      <div>
+        <h2>Every fruit, tracked</h2>
+        <p>Values, stock windows and trade talk for the whole roster — from commons to mythicals, permanents and gamepasses.</p>
+      </div>
+    </div>
+    <div class="vault reveal" aria-hidden="true">
+      
+  <div class="vault-row">
+    <span class="vault-tile"><img src="f00.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f01.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f02.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f03.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f04.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f05.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f06.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f07.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f08.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f09.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f10.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f11.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f12.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f13.png" alt="" loading="lazy" decoding="async"></span>
+    <span class="vault-tile"><img src="f00.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f01.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f02.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f03.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f04.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f05.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f06.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f07.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f08.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f09.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f10.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f11.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f12.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f13.png" alt="" loading="lazy" decoding="async"></span>
+  </div>
+      
+  <div class="vault-row vault-row--rev">
+    <span class="vault-tile"><img src="f21.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f22.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f23.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f24.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f25.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f26.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f27.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f28.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f29.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f30.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f31.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f32.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f33.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f34.png" alt="" loading="lazy" decoding="async"></span>
+    <span class="vault-tile"><img src="f21.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f22.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f23.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f24.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f25.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f26.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f27.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f28.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f29.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f30.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f31.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f32.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f33.png" alt="" loading="lazy" decoding="async"></span><span class="vault-tile"><img src="f34.png" alt="" loading="lazy" decoding="async"></span>
+  </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="sec-head reveal">
+      <div class="eyebrow"><span class="emoji " aria-hidden="true" style="animation-delay:-2.75s">🎃</span> <b>03</b> Live in game</div>
+      <div>
+        <h2>The Halloween window is closing</h2>
+        <p>Trick-or-Treat is live in Blox Fruits right now. Here's how long is left.</p>
+      </div>
+    </div>
+    
+<div class="cd-wrap reveal">
+  <div class="cd-top">
+    <span class="tag "><span class="dot"></span>Ends 15 Nov</span>
+  </div>
+  <h3>Halloween / Trick-or-Treat</h3>
+  <p class="cd-sub">Seasonal content with limited rewards — farm it before the window shuts.</p>
+  <div class="countdown" id="event-countdown"></div>
+  <div class="cd-meter">
+    <div class="cd-bar" aria-hidden="true"><i id="cd-progress"></i></div>
+    <span class="cd-pct" id="cd-pct" aria-hidden="true">0%</span>
+  </div>
+  <p class="cd-sub" style="margin:1.1rem 0 0"><a class="crumb" href="values.html" style="color:var(--pink)">Game news &amp; stock <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8"/></svg></a></p>
+</div>
+  </section>
+
+  <section class="section">
+    <div class="sec-head reveal">
+      <div class="eyebrow"><span class="emoji " aria-hidden="true" style="animation-delay:-3.30s">⚡</span> <b>04</b> Inside the crew</div>
+      <div>
+        <h2>What makes it different</h2>
+        <p>An actual economy, real progression and rewards for the people who show up.</p>
+      </div>
+    </div>
+    <div class="bento">
+      <div class="card card--feature reveal">
+        <div class="chip"><span class="emoji " aria-hidden="true" style="animation-delay:-0.00s">📜</span></div>
+        <h3>Daily quests, real rewards</h3>
+        <p>Complete daily quests to earn <strong>DC (Dark Coins)</strong> every day. Stack them up and spend them in the store on tournament tickets, giveaway entries, fruit rolls and roles that pay you back daily.</p>
+      </div>
+      <div class="card reveal "><div class="chip"><span class="emoji " aria-hidden="true" style="animation-delay:-0.55s">📈</span></div><h3>Chat leveling</h3><p>Every 5 chat levels you rank up. Hit level 30 to unlock <strong>Diamond Chatter</strong> and its perks.</p></div>
+      <div class="card reveal "><div class="chip"><span class="emoji " aria-hidden="true" style="animation-delay:-1.10s">🚀</span></div><h3>Boost perks</h3><p>Server boosters get extra giveaway entries, recognition and a faster climb through the ranks.</p></div>
+      <div class="card reveal card--full"><div class="chip"><span class="emoji " aria-hidden="true" style="animation-delay:-1.65s">🎯</span></div><h3>The 300 members goal</h3><p>At <strong>300 members</strong> the crew runs a <strong>Permanent Portal</strong> giveaway. We are close.</p></div>
+    </div>
+  </section>
+
+  
+<section class="section">
+  <div class="disc-band reveal">
+    <div class="disc-copy">
+      <span class="tag tag--warm"><span class="dot"></span>Support the crew</span>
+      <h2>Like us on Discadia <span class="emoji emoji--lg" aria-hidden="true" style="animation-delay:-2.20s">💜</span></h2>
+      <p>Discadia is how new players find Dark Fruits. One tap on the heart pushes us up the listings and brings more traders, clans and giveaway hunters into the server — it costs you nothing.</p>
+      <div class="cta-row">
+        <a class="btn btn-main" href="https://discadia.com/server/blox-fruits-trading-and-chat-h/" target="_blank" rel="noopener"><span class="emoji " aria-hidden="true" style="animation-delay:-2.75s">⭐</span> Like Dark Fruits</a>
+        <a class="btn btn-ghost" href="https://discadia.com/server/blox-fruits-trading-and-chat-h/" target="_blank" rel="noopener">View our page <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+      </div>
+    </div>
+    <div class="disc-art" aria-hidden="true">
+      <span class="emoji emoji--xl" aria-hidden="true" style="animation-delay:-3.30s">💜</span><span class="emoji emoji--lg" aria-hidden="true" style="animation-delay:-0.00s">⭐</span><span class="emoji emoji--lg" aria-hidden="true" style="animation-delay:-0.55s">🔥</span>
+    </div>
+  </div>
+</section>
+
+  
+<div class="cta-band reveal">
+  <img class="deco" src="f18.png" alt="" loading="lazy" decoding="async">
+  <h2>The crew is waiting</h2>
+  <p>Trade, quest, climb ranks and join a division. It takes one click to get in.</p>
+  <div class="cta-row"><a href="https://discord.gg/jNrBh8EbQ" class="btn btn-main" target="_blank" rel="noopener"><svg class="icon icon--brand icon--sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.3 4.4A16.5 16.5 0 0 0 16.1 3l-.3.6a12.4 12.4 0 0 0-3.6 0L11.9 3a16.5 16.5 0 0 0-4.2 1.4C4.9 8.6 4.2 12.7 4.4 16.7a16.7 16.7 0 0 0 5 2.5l.7-1.1a10.7 10.7 0 0 1-1.7-.8l.4-.3a11.9 11.9 0 0 0 10.4 0l.4.3-1.7.8.7 1.1a16.7 16.7 0 0 0 5-2.5c.3-4.6-.6-8.6-2.3-12.3ZM9.7 14.4c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Zm4.6 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Z"/></svg> Join Discord</a></div>
+</div>
+</div></main>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="brand" aria-label="Dark Fruits — home"><span class="mark"><img src="dark-fruits-logo.gif" width="28" height="25" alt=""></span><span class="word">DARK <span>FRUITS</span></span></a>
+        <p>A Blox Fruits crew for traders, clans and everyone who grinds. Trading, values, tournaments and giveaways in one place.</p>
+        <a class="btn btn-main" href="https://discord.gg/jNrBh8EbQ" target="_blank" rel="noopener"><svg class="icon icon--brand icon--sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.3 4.4A16.5 16.5 0 0 0 16.1 3l-.3.6a12.4 12.4 0 0 0-3.6 0L11.9 3a16.5 16.5 0 0 0-4.2 1.4C4.9 8.6 4.2 12.7 4.4 16.7a16.7 16.7 0 0 0 5 2.5l.7-1.1a10.7 10.7 0 0 1-1.7-.8l.4-.3a11.9 11.9 0 0 0 10.4 0l.4.3-1.7.8.7 1.1a16.7 16.7 0 0 0 5-2.5c.3-4.6-.6-8.6-2.3-12.3ZM9.7 14.4c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Zm4.6 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Z"/></svg> Join Discord</a>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <nav class="foot-nav" aria-label="Explore">
+          <a href="trading.html">Trading</a>
+          <a href="values.html">Values &amp; stock</a>
+          <a href="events.html">Events</a>
+          <a href="giveaways.html">Giveaways</a>
+        </nav>
+      </div>
+      <div>
+        <h4>The crew</h4>
+        <nav class="foot-nav" aria-label="The crew">
+          <a href="clans.html">Clans</a>
+          <a href="shop.html">Shop &amp; DC</a>
+          <a href="staff.html">Staff</a>
+          <a href="rules.html">Rules</a>
+        </nav>
+      </div>
+    </div>
+    <div class="foot-base">
+      <p class="legal">Unofficial fan community. Not affiliated with Roblox or Blox Fruits developers.</p>
+      <p>© <span id="year">2026</span> Dark Fruits</p>
+      <a class="disc-link" href="https://discadia.com/server/blox-fruits-trading-and-chat-h/" target="_blank" rel="noopener"><span class="emoji " aria-hidden="true" style="animation-delay:-0.55s">💜</span> Like us on Discadia <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+      <a class="to-top" href="#top">Back to top <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/></svg></a>
+    </div>
+  </div>
+</footer>
+<script src="app.js?v=6" defer></script>
+</body>
+</html>

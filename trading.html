@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trading — Dark Fruits</title>
+  <meta name="description" content="Blox Fruits trading hub: find partners, check live values and trade safely with the Dark Fruits crew.">
+  <meta name="theme-color" content="#050309">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://dark-fruits.official10.workers.dev/trading.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dark Fruits">
+  <meta property="og:title" content="Trading — Dark Fruits">
+  <meta property="og:description" content="Blox Fruits trading hub: find partners, check live values and trade safely with the Dark Fruits crew.">
+  <meta property="og:image" content="og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Trading — Dark Fruits">
+  <meta name="twitter:description" content="Blox Fruits trading hub: find partners, check live values and trade safely with the Dark Fruits crew.">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="logo-mark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800;900&family=Sora:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=6">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="aura" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+<header class="top" id="top">
+  <div class="top-inner">
+    <a href="index.html" class="brand" aria-label="Dark Fruits — home"><span class="mark"><img src="dark-fruits-logo.gif" width="28" height="25" alt=""></span><span class="word">DARK <span>FRUITS</span></span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html">Home</a><a href="trading.html" aria-current="page">Trading</a><a href="values.html">Values</a><a href="events.html">Events</a><a href="giveaways.html">Giveaways</a><a href="clans.html">Clans</a><a href="shop.html">Shop</a>
+      <div class="nav-more" id="nav-more">
+        <button type="button" aria-expanded="false" aria-haspopup="true">More <span class="caret"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9.5 12 15.5 18 9.5"/></svg></span></button>
+        <div class="over-panel"><a href="staff.html">Staff</a><a href="rules.html">Rules</a><a href="https://discadia.com/server/blox-fruits-trading-and-chat-h/" target="_blank" rel="noopener"><span class="emoji " aria-hidden="true" style="animation-delay:-1.10s">💜</span> Discadia</a></div>
+      </div>
+      <a class="btn btn-main btn-join" href="https://discord.gg/jNrBh8EbQ" target="_blank" rel="noopener">Join</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span class="b-icon b-icon--menu"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span><span class="b-icon b-icon--close"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg></span></button>
+  </div>
+  <div class="nav-progress" aria-hidden="true"><i id="nprog"></i></div>
+</header>
+<nav class="drawer" id="drawer" aria-label="Mobile">
+  <span class="d-label">Sections</span>
+  <a href="index.html">Home<span>Start here</span></a><a href="trading.html" aria-current="page">Trading<span>Partners & safety</span></a><a href="values.html">Values<span>Live values & stock</span></a><a href="events.html">Events<span>Tournaments & races</span></a><a href="giveaways.html">Giveaways<span>Entries & perks</span></a><a href="clans.html">Clans<span>5 divisions</span></a><a href="shop.html">Shop & DC<span>The economy</span></a><a href="staff.html">Staff<span>Leadership</span></a><a href="rules.html">Rules<span>Standards</span></a><a href="https://discadia.com/server/blox-fruits-trading-and-chat-h/" target="_blank" rel="noopener">Like us on Discadia<span>Support the crew</span></a>
+  <a class="btn btn-main d-join" href="https://discord.gg/jNrBh8EbQ" target="_blank" rel="noopener"><svg class="icon icon--brand icon--sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.3 4.4A16.5 16.5 0 0 0 16.1 3l-.3.6a12.4 12.4 0 0 0-3.6 0L11.9 3a16.5 16.5 0 0 0-4.2 1.4C4.9 8.6 4.2 12.7 4.4 16.7a16.7 16.7 0 0 0 5 2.5l.7-1.1a10.7 10.7 0 0 1-1.7-.8l.4-.3a11.9 11.9 0 0 0 10.4 0l.4.3-1.7.8.7 1.1a16.7 16.7 0 0 0 5-2.5c.3-4.6-.6-8.6-2.3-12.3ZM9.7 14.4c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Zm4.6 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Z"/></svg> Join Discord</a>
+</nav><main id="main">
+
+<header class="page-top">
+  <div class="wrap page-inner">
+    <span class="page-num" aria-hidden="true">02</span>
+    <a class="crumb" href="index.html"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/></svg> Back to home</a>
+    <div class="eyebrow" style="margin-top:1.1rem"><span class="emoji " aria-hidden="true" style="animation-delay:-1.10s">⚔️</span> <b>02</b> Trading</div>
+    <h1>The Blox Fruits <em>trading hub</em></h1>
+    <p class="lede">Find partners, post offers, check live values and stay safe. Voice trading is open around the clock.</p>
+  </div>
+</header>
+<div class="wrap">
+  <section class="section">
+    <div class="bento bento--2">
+      <div class="card reveal "><div class="chip"><span class="emoji " aria-hidden="true" style="animation-delay:-1.65s">🔍</span></div><h3>Find partners</h3><p>Dedicated channels for looking, offering and value talk — so your offers actually get seen.</p></div>
+      <div class="card reveal "><div class="chip"><span class="emoji " aria-hidden="true" style="animation-delay:-2.20s">📊</span></div><h3>Use live values</h3><p>Check the <a href="values.html">Values page</a>, then confirm on the live list before you commit to a deal.</p></div>
+      <div class="card reveal "><div class="chip"><span class="emoji " aria-hidden="true" style="animation-delay:-2.75s">🛡️</span></div><h3>Anti-scam first</h3><p>Never trade outside trusted methods. Report scams to staff immediately and we handle it.</p></div>
+      <div class="card reveal "><div class="chip"><span class="emoji " aria-hidden="true" style="animation-delay:-3.30s">🎙️</span></div><h3>Voice trades</h3><p>Jump into voice to negotiate and close deals live with the crew — no cold DMs required.</p></div>
+      <div class="card reveal card--full"><div class="chip"><span class="emoji " aria-hidden="true" style="animation-delay:-0.00s">💎</span></div><h3>Booster &amp; Diamond Chatter perks</h3><p>Boosters and members who reach Diamond Chatter (level 30) unlock extra trading privileges and giveaway entry bonuses.</p></div>
+    </div>
+  </section>
+  
+<div class="cta-band reveal">
+  <img class="deco" src="f05.png" alt="" loading="lazy" decoding="async">
+  <h2>Start trading</h2>
+  <p>Join Discord and open the trading channels.</p>
+  <div class="cta-row"><a href="https://discord.gg/jNrBh8EbQ" class="btn btn-main" target="_blank" rel="noopener"><svg class="icon icon--brand icon--sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.3 4.4A16.5 16.5 0 0 0 16.1 3l-.3.6a12.4 12.4 0 0 0-3.6 0L11.9 3a16.5 16.5 0 0 0-4.2 1.4C4.9 8.6 4.2 12.7 4.4 16.7a16.7 16.7 0 0 0 5 2.5l.7-1.1a10.7 10.7 0 0 1-1.7-.8l.4-.3a11.9 11.9 0 0 0 10.4 0l.4.3-1.7.8.7 1.1a16.7 16.7 0 0 0 5-2.5c.3-4.6-.6-8.6-2.3-12.3ZM9.7 14.4c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Zm4.6 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Z"/></svg> Join Discord</a></div>
+</div>
+</div></main>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="brand" aria-label="Dark Fruits — home"><span class="mark"><img src="dark-fruits-logo.gif" width="28" height="25" alt=""></span><span class="word">DARK <span>FRUITS</span></span></a>
+        <p>A Blox Fruits crew for traders, clans and everyone who grinds. Trading, values, tournaments and giveaways in one place.</p>
+        <a class="btn btn-main" href="https://discord.gg/jNrBh8EbQ" target="_blank" rel="noopener"><svg class="icon icon--brand icon--sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.3 4.4A16.5 16.5 0 0 0 16.1 3l-.3.6a12.4 12.4 0 0 0-3.6 0L11.9 3a16.5 16.5 0 0 0-4.2 1.4C4.9 8.6 4.2 12.7 4.4 16.7a16.7 16.7 0 0 0 5 2.5l.7-1.1a10.7 10.7 0 0 1-1.7-.8l.4-.3a11.9 11.9 0 0 0 10.4 0l.4.3-1.7.8.7 1.1a16.7 16.7 0 0 0 5-2.5c.3-4.6-.6-8.6-2.3-12.3ZM9.7 14.4c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Zm4.6 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Z"/></svg> Join Discord</a>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <nav class="foot-nav" aria-label="Explore">
+          <a href="trading.html">Trading</a>
+          <a href="values.html">Values &amp; stock</a>
+          <a href="events.html">Events</a>
+          <a href="giveaways.html">Giveaways</a>
+        </nav>
+      </div>
+      <div>
+        <h4>The crew</h4>
+        <nav class="foot-nav" aria-label="The crew">
+          <a href="clans.html">Clans</a>
+          <a href="shop.html">Shop &amp; DC</a>
+          <a href="staff.html">Staff</a>
+          <a href="rules.html">Rules</a>
+        </nav>
+      </div>
+    </div>
+    <div class="foot-base">
+      <p class="legal">Unofficial fan community. Not affiliated with Roblox or Blox Fruits developers.</p>
+      <p>© <span id="year">2026</span> Dark Fruits</p>
+      <a class="disc-link" href="https://discadia.com/server/blox-fruits-trading-and-chat-h/" target="_blank" rel="noopener"><span class="emoji " aria-hidden="true" style="animation-delay:-1.65s">💜</span> Like us on Discadia <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+      <a class="to-top" href="#top">Back to top <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/></svg></a>
+    </div>
+  </div>
+</footer>
+<script src="app.js?v=6" defer></script>
+</body>
+</html>

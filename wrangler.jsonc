@@ -1,0 +1,9 @@
+// Cloudflare Worker: serves this folder as a static site.
+// Deploy with: npx wrangler deploy
+{
+  "name": "dark-fruits",
+  "compatibility_date": "2026-11-08",
+  "assets": {
+    "directory": "."
+  }
+}
